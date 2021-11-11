@@ -17,7 +17,7 @@
     "make:application": "osjs-cli make:application",
     "make:iframe-application": "osjs-cli make:iframe-application",
     "make:provider": "osjs-cli make:provider",
-    "build": "webpack",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider; webpack",
     "watch": "webpack --watch",
     "start": "npm run build && npm run package:discover -- --copy && node src/server/index.js"
   },
